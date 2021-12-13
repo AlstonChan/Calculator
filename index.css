@@ -49,10 +49,47 @@ h1 {
   grid-template-rows: repeat(5, 60px);
 }
 
-#btn-container > * {
+#btn-container > button {
   font-size: 1.2rem;
   padding: 0;
   margin: 0;
   border: solid 0.5px #3d3535;
   background-color: aliceblue;
+  cursor: pointer;
+}
+
+#btn-container > button[data-all-clear] {
+  background-color: #fdd0c4;
+}
+
+#btn-container > button[data-delete] {
+  background-color: #f9fdc4;
+}
+
+#btn-container > button[data-operation] {
+  background-color: #c4fdd2;
+}
+
+#btn-container > button[data-equal] {
+  background-color: #c4fdfa;
+}
+
+#btn-container > .clicked-clear {
+  background-color: #fca48c !important;
+}
+
+#btn-container > .clicked-del {
+  background-color: #f0f878 !important;
+}
+
+#btn-container > .clicked-reg {
+  background-color: rgb(109, 183, 248) !important;
+}
+
+#btn-container > .clicked-equal {
+  background-color: #77f5ef !important;
+}
+
+#btn-container > .clicked-operation {
+  background-color: #6af58d !important;
 }
