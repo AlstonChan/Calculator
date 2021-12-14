@@ -17,7 +17,7 @@ allClearBtn.addEventListener('click', ()=>{
     outputAns.innerText= ''
 })
 
-deleteBtn.addEventListener('click', (e)=>{
+deleteBtn.addEventListener('click', ()=>{
     deleteBtn.classList.add('clicked-del')
     setTimeout(()=>deleteBtn.classList.remove('clicked-del'), 80)
 
@@ -58,6 +58,9 @@ function checkNumber(arg) {
         case '9':
             outputProc.innerText = outputProc.innerText + 9
             break;
+        case '0':
+            outputProc.innerText = outputProc.innerText + 0
+            break;
     }
 }
 
@@ -70,8 +73,32 @@ function checkOperation(arg) {
     setTimeout(()=>arg.classList.remove('clicked-operation'), 80)
 
     switch (arg.textContent) {
-        case '^':
-            outputProc.innerText = outputProc.innerText 
+        case '+':
+            outputProc.innerText = outputProc.innerText + "+"
+            break;
+        case '-':
+            outputProc.innerText = outputProc.innerText + "-"
+            break;
+        case 'x':
+            outputProc.innerText = outputProc.innerText + "x"
+            break;
+        case '÷':
+            outputProc.innerText = outputProc.innerText + "÷"
+            break;
+        case '%':
+            outputProc.innerText = outputProc.innerText + "%"
+            break;
+        case '( )':
+            const firstOccur = outputProc.innerText.lastIndexOf('(')
+            const lastOccur = outputProc.innerText.lastIndexOf(')')
+            if (firstOccur === -1) {
+                outputProc.innerText = outputProc.innerText + "("
+            } else if ((firstOccur !== -1) && (lastOccur > firstOccur)) {
+                outputProc.innerText = outputProc.innerText + '('
+            } else {
+                outputProc.innerText = outputProc.innerText + ")"
+            }
+            break;
     }
 }
 

@@ -32,13 +32,29 @@ h1 {
   text-align: end;
 }
 
+.display-proc-container {
+  position: relative;
+  /* margin-right: 5px; */
+  transform: rotateX(180deg);
+  max-width: 240px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
 #display-proc {
+  display: inline-block;
   opacity: 0.6;
-  margin: 5px;
+  margin: 2px 5px;
+  transform: rotateX(180deg);
+  white-space: nowrap;
+}
+
+@keyframes blink {
+  to {opacity: .0;}
 }
 
 #display-ans {
-  margin: 5px;
+  margin: 0 5px;
   font-size: 1.5rem;
   word-wrap: break-word;
 }
@@ -74,6 +90,10 @@ h1 {
   background-color: #c4fdfa;
 }
 
+/* #btn-container > button[data-navigation] {
+  background-color: #ebc4fd;
+} */
+
 #btn-container > .clicked-clear {
   background-color: #fca48c !important;
 }
@@ -93,3 +113,7 @@ h1 {
 #btn-container > .clicked-operation {
   background-color: #6af58d !important;
 }
+
+/* #btn-container > .clicked-navigate {
+  background-color: #ce6efa !important;
+} */
