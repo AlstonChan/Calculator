@@ -1,0 +1,51 @@
+.bmi-btn-container {
+  max-width: 300px;
+  display: flex;
+}
+
+#bmiStandard,
+#bmiMetric {
+  border-radius: 8px 8px 0 0;
+  padding: 3px 9px;
+  margin-right: 5px;
+  border: none;
+}
+
+.activeBtn {
+  padding: 6px 9px;
+  background-color: rgb(104, 219, 133);
+}
+
+.bmi-main {
+  max-width: 300px;
+  background-color: rgb(104, 219, 133);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+input {
+  width: 70px;
+  margin-bottom: 8px;
+}
+
+.bmi-ans {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-bmi {
+  background-color: rgb(155, 37, 37);
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  margin: 2px auto auto auto;
+  padding: 2px;
+  display: none;
+}
