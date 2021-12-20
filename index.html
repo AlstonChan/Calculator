@@ -54,6 +54,7 @@
           <button data-equal>=</button>
         </div>
       </div>
+      <h3 class="inProgress">Basic Calculater not yet done</h3>
     </section>
     <section>
       <h1>BMI Calculator</h1>
@@ -70,9 +71,9 @@
             accept-charset="utf-8"
           >
             <label for="bmiHeight">Your Height:</label>
-            <input type="number" id="bmiHeight" placeholder="feet" required />
+            <input type="text" id="bmiHeight" placeholder="feet" required />
             <input
-              type="number"
+              type="text"
               id="bmiHeightInches"
               placeholder="inches"
               required
@@ -80,7 +81,7 @@
             <br />
 
             <label for="bmiHeight">Your Weight:</label>
-            <input type="number" id="bmiWeight" placeholder="pounds" required />
+            <input type="text" id="bmiWeight" placeholder="pounds" required />
             <div class="bmi-ans">
               <input type="submit" value="Calculate" />
               <label>
@@ -91,7 +92,15 @@
             </div>
           </form>
         </div>
+        <article class="bmiCategories">
+          <h2><u> BMI Categories:</u></h2>
+          <p>Underweight = &lt; 18.5</p>
+          <p>Normal weight = 18.5 – 24.9</p>
+          <p>Overweight = 25 – 29.9</p>
+          <p>Obesity = BMI of 30 or greater</p>
+        </article>
       </div>
     </section>
+    <br /><br /><br />
   </body>
 </html>
