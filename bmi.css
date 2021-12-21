@@ -9,6 +9,7 @@
   padding: 3px 9px;
   margin-right: 5px;
   border: none;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
@@ -18,17 +19,17 @@
 }
 
 .bmi-main {
-  max-width: 300px;
-  min-width: 240px;
+  min-width: 400px;
   background-color: rgb(104, 219, 133);
   border-radius: 10px;
-  padding: 10px;
-  font-size: 0.85rem;
+  padding: 15px;
+  font-size: 1.3rem;
 }
 
 input {
-  width: 70px;
+  width: 120px;
   margin-bottom: 8px;
+  font-size: 1.3rem;
 }
 
 .bmi-ans {
@@ -69,9 +70,15 @@ input {
   margin: 15px 0 0 0;
   padding: 10px;
   border-radius: 10px;
+  font-size: larger;
   border: rgb(104, 219, 133) double 3px;
 }
 
-.bmiCategories > * {
+.bmiCategories > h2 {
   margin: 3px 0 0 0;
+}
+
+.bmiCategories > ul {
+  margin: 3px 0 0 0;
+  font-size: 1.2rem;
 }

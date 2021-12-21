@@ -1,0 +1,50 @@
+footer {
+  background-color: #1693db;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+.iconGroup {
+  display: flex; /*Remove this and icon function will break, idk why*/
+}
+
+.iconGroup > * {
+  padding: 0 15px;
+  transition: 0.15s ease-in;
+}
+
+.iconGroup > a:hover,
+.iconGroup > button:hover {
+  transform: translate(0, 7px);
+}
+
+.iconGroup > button {
+  border: none;
+  background-color: #ffffff00;
+  cursor: pointer;
+}
+
+footer > p {
+  margin: 10px 0 0 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.modal {
+  position: absolute;
+  transform: translate(150px, -60px);
+  background-color: rgb(3, 144, 3);
+  color: #fff;
+  border-radius: 10px;
+  display: none;
+}
+
+.modalShow {
+  display: block;
+}
