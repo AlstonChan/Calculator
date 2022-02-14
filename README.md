@@ -11,5 +11,5 @@ A calculator using only html, css and vanilla javascript, without using eval().
 ## Preview
 
 <div align="center" style='display:flex; justify-content:center'>
-  <img src='./public/preview.jpg' />
+  <img src='./public/main-preview.jpg' />
 </div>
