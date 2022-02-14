@@ -15,6 +15,7 @@ function checkBmiType(e) {
     evt.className = "activeBtn";
     evt.previousElementSibling.className = "";
 
+    bmiWeight.placeholder = "kg";
     bmiHeight.placeholder = "cm";
     bmiHeightInches.removeAttribute("required");
     bmiHeightInches.className = "display-invi";
@@ -22,6 +23,7 @@ function checkBmiType(e) {
     evt.className = "activeBtn";
     evt.nextElementSibling.className = "";
 
+    bmiWeight.placeholder = "pounds";
     bmiHeight.placeholder = "feet";
     bmiHeightInches.setAttribute("required", "");
     bmiHeightInches.className = "";
