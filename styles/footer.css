@@ -1,5 +1,5 @@
 footer {
-  background-color: #1693db;
+  background-color: #3c3030;
   padding: 8px 0;
   display: flex;
   flex-direction: column;
@@ -34,6 +34,7 @@ footer > p {
   font-size: 1.4rem;
   font-weight: 600;
   text-align: center;
+  color: rgb(206, 206, 206);
 }
 
 .modal {

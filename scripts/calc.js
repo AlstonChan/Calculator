@@ -79,14 +79,17 @@ function checkOperation(arg) {
     case "+":
       outputProc.innerText = outputProc.innerText + "+";
       break;
+    case ".":
+      outputProc.innerText = outputProc.innerText + ".";
+      break;
     case "-":
       outputProc.innerText = outputProc.innerText + "-";
       break;
     case "x":
-      outputProc.innerText = outputProc.innerText + "x";
+      outputProc.innerText = outputProc.innerText + "*";
       break;
     case "÷":
-      outputProc.innerText = outputProc.innerText + "÷";
+      outputProc.innerText = outputProc.innerText + "/";
       break;
     case "%":
       outputProc.innerText = outputProc.innerText + "%";
@@ -105,6 +108,8 @@ function checkOperation(arg) {
   }
 }
 
+const parser = math.parser();
+
 operationBtn.forEach((opr) => {
   opr.addEventListener("click", () => checkOperation(opr));
 });
@@ -113,5 +118,5 @@ equalBtn.addEventListener("click", () => {
   equalBtn.classList.add("clicked-equal");
   setTimeout(() => equalBtn.classList.remove("clicked-equal"), 80);
 
-  outputAns.innerText = outputProc.innerText;
+  outputAns.innerText = parser.evaluate(outputProc.innerText);
 });

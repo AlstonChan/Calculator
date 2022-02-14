@@ -6,11 +6,13 @@
 #bmiStandard,
 #bmiMetric {
   border-radius: 8px 8px 0 0;
-  padding: 3px 9px;
+  padding: 3px 15px;
   margin-right: 5px;
   border: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   cursor: pointer;
+  height: 40px;
+  transition: background-color 300ms ease;
 }
 
 .activeBtn {
@@ -21,7 +23,7 @@
 .bmi-main {
   min-width: 400px;
   background-color: rgb(104, 219, 133);
-  border-radius: 10px;
+  border-radius: 0 10px 10px 10px;
   padding: 15px;
   font-size: 1.3rem;
 }
@@ -65,20 +67,14 @@ input {
   display: none;
 }
 
-.bmiCategories {
-  background-color: #fff;
-  margin: 15px 0 0 0;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: larger;
-  border: rgb(104, 219, 133) double 3px;
+.bmi-info-container {
+  margin: -30px 30px 0 40px;
+  text-indent: 6%;
+  line-height: 1.9rem;
 }
 
-.bmiCategories > h2 {
-  margin: 3px 0 0 0;
-}
-
-.bmiCategories > ul {
-  margin: 3px 0 0 0;
-  font-size: 1.2rem;
+@media screen and (max-width: 900px) {
+  .bmi-info-container {
+    margin: -30px 0 0 0;
+  }
 }
