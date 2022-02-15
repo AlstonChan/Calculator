@@ -10,6 +10,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Nunito", sans-serif;
+  min-width: 320px;
 }
 
 html {
@@ -28,17 +29,12 @@ main {
   margin: 0 auto;
 }
 
-.cont-info-seperator {
-  display: flex;
-}
-
+/* header part */
 .main-headings-container {
   display: flex;
-  cursor: pointer;
 }
 
 .main-headings {
-  color: #fff;
   font-size: 3.5rem;
   text-align: center;
   margin: 0;
@@ -53,11 +49,64 @@ main {
   width: 100%;
 }
 
+/* toggle dark/light mode */
+.toggle-mode {
+  padding-right: 20px;
+  width: 100%;
+  display: flex;
+}
+
+.toggle-mode-container {
+  display: flex;
+  margin: 0 0 0 auto;
+  position: relative;
+}
+
+.toggle-mode-button {
+  cursor: pointer;
+  margin: 0;
+  appearance: none;
+  border-radius: 999px;
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  background: none;
+  border: none;
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-mode-img {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  visibility: hidden;
+}
+
+.sun {
+  color: #222;
+  transition: color 200ms ease-in-out;
+}
+
+.moon {
+  color: #fff;
+  transition: color 200ms ease-in-out;
+}
+
+/* global  */
+.cont-info-seperator {
+  display: flex;
+}
+
 .sub-headings {
   color: rgb(175, 175, 175);
   margin: 0;
   font-size: 2.5rem;
   margin: 0 0 10px 0;
+  transition: color 200ms ease-in-out;
 }
 
 .container {
@@ -69,19 +118,13 @@ main {
   margin: 0 0 50px 30px;
 }
 
-samp {
-  background-color: rgb(78, 78, 78);
-}
-
 .calculator-p {
   font-size: 1.255rem;
-  color: #fff;
 }
 
 .calculator-p-list {
   text-indent: 0;
   font-size: 1.255rem;
-  color: #fff;
 }
 
 .calculator-p-link {
@@ -91,6 +134,15 @@ samp {
 
 .calculator-p-link:hover {
   color: rgb(100, 233, 255);
+}
+
+.calculator-p-link-sun {
+  color: rgb(169 39 153);
+  transition: color 200ms ease-in-out;
+}
+
+.calculator-p-link-sun:hover {
+  color: rgb(126, 27, 114);
 }
 
 @media screen and (max-width: 1150px) {
@@ -127,5 +179,32 @@ samp {
   }
   .container {
     margin: 0 0 50px 0;
+  }
+  .toggle-mode-button {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .main-headings-img-container {
+    max-width: 50px;
+  }
+  .toggle-mode-button {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .main-headings-img-container {
+    max-width: 40px;
+  }
+  .toggle-mode-button {
+    width: 40px;
+    height: 40px;
+  }
+  .main-headings {
+    font-size: 2rem;
   }
 }

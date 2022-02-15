@@ -26,7 +26,7 @@ function checkBmiType(e) {
     bmiWeight.placeholder = "pounds";
     bmiHeight.placeholder = "feet";
     bmiHeightInches.setAttribute("required", "");
-    bmiHeightInches.className = "";
+    bmiHeightInches.className = "bmiinput";
   }
 }
 

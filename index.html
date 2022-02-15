@@ -15,10 +15,10 @@
     <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
 
     <!-- Styling Link -->
-    <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/calc.css" />
     <link rel="stylesheet" href="styles/bmi.css" />
     <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/global.css" />
 
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,6 +29,7 @@
     />
 
     <!-- Script Tags-->
+    <script defer src="scripts/index.js"></script>
     <script defer src="scripts/calc.js"></script>
     <script defer src="scripts/bmi.js"></script>
     <script defer src="scripts/footer.js"></script>
@@ -47,6 +48,24 @@
           <img class="main-headings-img" src="./public/favicon.ico" alt="" />
         </div>
         <h1 class="main-headings">Calculator</h1>
+        <div class="toggle-mode">
+          <div class="toggle-mode-container">
+            <button id="toggleModeButton" class="toggle-mode-button">
+              <img
+                id="toggleModeMoon"
+                src="./public/moon.svg"
+                alt="moon"
+                class="toggle-mode-img"
+              />
+              <img
+                id="toggleModeSun"
+                src="./public/sun.png"
+                alt="sun"
+                class="toggle-mode-img"
+              />
+            </button>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -119,6 +138,7 @@
                 approximations to the value and not
                 <samp>&nbsp;0.2&nbsp;</samp>. You can learn more
                 <a
+                  id="64bits-so-explain"
                   class="calculator-p-link"
                   href="https://stackoverflow.com/questions/588004/is-floating-point-math-broken"
                   >here</a
@@ -135,7 +155,7 @@
       <section class="flex-col bmi-calc">
         <h2 class="sub-headings">BMI Calculator</h2>
         <div class="cont-info-seperator">
-          <div class="container">
+          <div class="container bmi-container">
             <div class="bmi-btn-container">
               <button id="bmiStandard" class="activeBtn">Standard</button>
               <button id="bmiMetric">Metric</button>
@@ -147,25 +167,45 @@
                 autocomplete="off"
                 accept-charset="utf-8"
               >
-                <label for="bmiHeight">Your Height:</label>
-                <input type="text" id="bmiHeight" placeholder="feet" required />
-                <input
-                  type="text"
-                  id="bmiHeightInches"
-                  placeholder="inches"
-                  required
-                />
-                <br />
-
-                <label for="bmiHeight">Your Weight:</label>
-                <input
-                  type="text"
-                  id="bmiWeight"
-                  placeholder="pounds"
-                  required
-                />
+                <div class="bmi-inputContainer-label">
+                  <label for="bmiHeight" style="width: 125px"
+                    >Your Height:</label
+                  >
+                  <div class="bmi-inputContainer">
+                    <input
+                      type="text"
+                      class="bmiinput"
+                      id="bmiHeight"
+                      placeholder="feet"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="bmiHeightInches"
+                      placeholder="inches"
+                      required
+                      class="bmiinput"
+                    />
+                  </div>
+                </div>
+                <div class="bmi-inputContainer-label">
+                  <label for="bmiHeight" style="flex-shrink: 0"
+                    >Your Weight:</label
+                  >
+                  <input
+                    type="text"
+                    id="bmiWeight"
+                    placeholder="pounds"
+                    required
+                    class="bmiinput"
+                  />
+                </div>
                 <div class="bmi-ans">
-                  <input type="submit" value="Calculate" />
+                  <input
+                    type="submit"
+                    class="bmiinput-submit"
+                    value="Calculate"
+                  />
                   <label>
                     Your BMI:
                     <span id="bmiOutput">00.00</span>
@@ -175,6 +215,7 @@
               </form>
             </div>
           </div>
+
           <!-- BMI Calculator info Section -->
           <article class="bmi-info-container">
             <div>

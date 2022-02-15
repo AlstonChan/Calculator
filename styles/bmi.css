@@ -21,17 +21,42 @@
 }
 
 .bmi-main {
-  min-width: 400px;
+  max-width: 480px;
+  width: 100%;
   background-color: rgb(104, 219, 133);
   border-radius: 0 10px 10px 10px;
   padding: 15px;
   font-size: 1.3rem;
 }
 
-input {
-  width: 120px;
+.bmiinput {
+  max-width: 150px;
   margin-bottom: 8px;
   font-size: 1.3rem;
+  border: none;
+  transition: background-color 250ms ease-in;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.bmiinput:focus {
+  background-color: rgb(228, 228, 228);
+  outline: none;
+}
+
+.bmiinput-submit {
+  width: 120px;
+  margin-bottom: 8px;
+  padding: 3px 0;
+  font-size: 1.3rem;
+  border: none;
+  background-color: rgb(33, 236, 50);
+  border-radius: 5px;
+  transition: background-color 250ms ease-in;
+}
+
+.bmiinput-submit:hover {
+  background-color: rgb(32, 218, 47);
 }
 
 .bmi-ans {
@@ -46,6 +71,16 @@ input {
 
 .bmi-ans > input {
   cursor: pointer;
+}
+
+.bmi-inputContainer-label {
+  display: flex;
+}
+
+.bmi-inputContainer {
+  display: flex;
+  width: fit-content;
+  transition: flex 250ms ease-in-out;
 }
 
 .error-bmi {
@@ -76,5 +111,31 @@ input {
 @media screen and (max-width: 900px) {
   .bmi-info-container {
     margin: -30px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bmi-main {
+    padding: 15px;
+  }
+  .bmi-inputContainer {
+    flex: 3;
+    flex-direction: column;
+  }
+  .bmi-container {
+    width: 100%;
+  }
+  .bmiinput {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bmi-inputContainer-label {
+    flex-direction: column;
+  }
+  .bmiinput {
+    margin-left: 0;
   }
 }
