@@ -16,9 +16,9 @@ A calculator using only html, css and vanilla javascript, with **math.js**. Ther
 
 ## Feature
 
-[x] Simple calculations
-[x] Calculate BMI index
-[x] Dark/Light mode
+- [x] Simple calculations
+- [x] Calculate BMI index
+- [x] Dark/Light mode
 
 ## Credits
 
