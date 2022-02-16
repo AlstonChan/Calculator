@@ -11,7 +11,9 @@ A calculator using only html, css and vanilla javascript, with **math.js**. Ther
 ## Preview
 
 <div align="center" style='display:flex; justify-content:center'>
-  <img src='./public/main-preview0.jpg' />
+  <a href='https://alstonchan.github.io/Calculator/'>
+    <img src='./public/main-preview0.jpg' />
+  </a>
 </div>
 
 ## Feature
