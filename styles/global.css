@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: "Nunito", sans-serif;
   min-width: 320px;
+  color: #fff;
 }
 
 html {
@@ -83,6 +84,14 @@ main {
   position: absolute;
   right: 0;
   width: 100%;
+  visibility: visible;
+}
+
+.toggle-mode-img-hidden {
+  visibility: hidden;
+}
+
+.toggle-mode-img-hidden {
   visibility: hidden;
 }
 

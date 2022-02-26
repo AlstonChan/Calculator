@@ -16,6 +16,8 @@ const calcParaLink = document.getElementById("64bits-so-explain");
 sun.style.visibility = "visible";
 moon.style.visibility = "hidden";
 
+console.log(sun);
+
 const elementClassSun = (element) => {
   element.classList.add("sun");
   element.classList.remove("moon");

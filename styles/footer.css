@@ -39,13 +39,22 @@ footer > p {
 
 .modal {
   position: absolute;
-  transform: translate(150px, -60px);
+  transform: translate(145px, 0);
   background-color: rgb(3, 144, 3);
   color: #fff;
   border-radius: 10px;
-  display: none;
+  transition: transform 500ms cubic-bezier(1, -0.09, 0, 0.85),
+    opacity 50ms ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal > p {
+  margin: 10px;
 }
 
 .modalShow {
-  display: block;
+  transform: translate(145px, -50px);
+  visibility: visible;
+  opacity: 1;
 }
