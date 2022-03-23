@@ -2,21 +2,22 @@ const modeBtn = document.getElementById("toggleModeButton");
 const moon = document.getElementById("toggleModeMoon");
 const sun = document.getElementById("toggleModeSun");
 
-const mainHeader = document.getElementsByClassName("main-headings");
-const subHeader = document.getElementsByClassName("sub-headings");
+const mainHeader = [...document.getElementsByClassName("main-headings")];
+const subHeader = [...document.getElementsByClassName("sub-headings")];
 
-const calculatorParagraph = document.getElementsByClassName("calculator-p");
-const calculatorParagraphList =
-  document.getElementsByClassName("calculator-p-list");
+const calculatorParagraph = [
+  ...document.getElementsByClassName("calculator-p"),
+];
+const calculatorParagraphList = [
+  ...document.getElementsByClassName("calculator-p-list"),
+];
 
-const sample = document.getElementsByTagName("samp");
+const sample = [...document.getElementsByTagName("samp")];
 
 const calcParaLink = document.getElementById("64bits-so-explain");
 
 sun.style.visibility = "visible";
 moon.style.visibility = "hidden";
-
-console.log(sun);
 
 const elementClassSun = (element) => {
   element.classList.add("sun");

@@ -23,12 +23,14 @@
   transform: rotateX(180deg);
   white-space: nowrap;
   font-size: 1.3rem;
+  color: #000;
 }
 
 #display-ans {
   margin: 0 5px;
   font-size: 1.7rem;
   word-wrap: break-word;
+  color: #000;
 }
 
 #btn-container {

@@ -67,6 +67,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #000;
 }
 
 .bmi-ans > input {
