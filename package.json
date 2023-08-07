@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A calculator using only html, css and vanilla javascript ",
+  "homepage": "https://github.com/AlstonChan/Calculator#readme",
+  "main": "index.js",
+  "private": true,
+  "keywords": [
+    "HTML",
+    "CSS",
+    "javascript",
+    "calculator"
+  ],
+  "author": "AlstonChan <devalston390@gmail.com> (https://www.chanalston.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "mathjs": "^11.9.1"
+  }
+}
