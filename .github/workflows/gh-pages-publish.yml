@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: install require dependency and publish to GitHub pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: |
+          npm ci  # Install dependencies
+          mkdir -p ./vendor
+          cp ./node_modules/mathjs/lib/browser/math.js ./vendor/math.js  # Copy the necessary package to vendor directory
+          rm -r ./node_modules
+          mkdir node_modeles/mathjs/lib/browser
+          mv ./vendor/math.js ./node_modules/mathjs/lib/browser/math.js
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "51868695+AlstonChan@users.noreply.github.com"
+          git checkout -b gh-pages
+          git add -f node_modules
+          git commit -m "Deploy site"
+          git push origin gh-pages
