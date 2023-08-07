@@ -1,4 +1,11 @@
 /* Global Css */
+:root {
+  --blue-color: #3077a1;
+  --blue-hover-color: #388bba;
+  --success-color: #26b529;
+  --success-hover-color: #29c72b;
+}
+
 *,
 *::after,
 *::before {
@@ -111,10 +118,12 @@ main {
 }
 
 .sub-headings {
-  color: rgb(175, 175, 175);
-  margin: 0;
+  color: #b5c6da;
   font-size: 2.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   margin: 0 0 10px 0;
+
   transition: color 200ms ease-in-out;
 }
 

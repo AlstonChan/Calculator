@@ -1,5 +1,5 @@
 footer {
-  background-color: #3c3030;
+  background-color: #4b4b4b;
   padding: 8px 0;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ footer {
 
 footer > p {
   margin: 10px 0 0 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   color: rgb(206, 206, 206);
@@ -39,7 +39,7 @@ footer > p {
 
 .modal {
   position: absolute;
-  transform: translate(145px, 0);
+  transform: translate(120px, 0);
   background-color: rgb(3, 144, 3);
   color: #fff;
   border-radius: 10px;
@@ -54,7 +54,7 @@ footer > p {
 }
 
 .modalShow {
-  transform: translate(145px, -50px);
+  transform: translate(120px, -25px);
   visibility: visible;
   opacity: 1;
 }

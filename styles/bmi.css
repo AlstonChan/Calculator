@@ -16,47 +16,55 @@
 }
 
 .activeBtn {
+  color: #fff;
   padding: 6px 9px;
-  background-color: rgb(104, 219, 133);
+  background-color: var(--blue-color);
 }
 
 .bmi-main {
   max-width: 480px;
   width: 100%;
-  background-color: rgb(104, 219, 133);
+  background-color: var(--blue-color);
   border-radius: 0 10px 10px 10px;
   padding: 15px;
   font-size: 1.3rem;
 }
 
-.bmiinput {
-  max-width: 150px;
-  margin-bottom: 8px;
-  font-size: 1.3rem;
-  border: none;
-  transition: background-color 250ms ease-in;
-  border-radius: 5px;
-  margin-left: 5px;
+.bmi-header {
+  white-space: nowrap;
 }
 
-.bmiinput:focus {
+.bmi-input {
+  font-size: 1.2rem;
+
+  padding: 5px 10px;
+  max-width: 150px;
+
+  border: none;
+  border-radius: 5px;
+}
+.bmi-input:focus {
   background-color: rgb(228, 228, 228);
   outline: none;
 }
 
-.bmiinput-submit {
-  width: 120px;
-  margin-bottom: 8px;
-  padding: 3px 0;
-  font-size: 1.3rem;
+.bmi-input-submit {
+  appearance: none;
   border: none;
-  background-color: rgb(33, 236, 50);
+
+  margin-bottom: 8px;
+  padding: 5px 18px;
+
+  color: #fff;
+  font-size: 1.3rem;
+
+  background-color: var(--success-color);
   border-radius: 5px;
+
   transition: background-color 250ms ease-in;
 }
-
-.bmiinput-submit:hover {
-  background-color: rgb(32, 218, 47);
+.bmi-input-submit:hover {
+  background-color: var(--success-hover-color);
 }
 
 .bmi-ans {
@@ -76,10 +84,18 @@
 
 .bmi-inputContainer-label {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 10px;
 }
 
 .bmi-inputContainer {
   display: flex;
+  align-items: center;
+  gap: 5px;
+
   width: fit-content;
   transition: flex 250ms ease-in-out;
 }
