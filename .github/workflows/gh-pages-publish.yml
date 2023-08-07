@@ -24,7 +24,7 @@ jobs:
           mkdir -p ./vendor
           cp ./node_modules/mathjs/lib/browser/math.js ./vendor/math.js  # Copy the necessary package to vendor directory
           rm -r ./node_modules
-          mkdir node_modeles/mathjs/lib/browser
+          mkdir ./node_modules/mathjs/lib/browser
           mv ./vendor/math.js ./node_modules/mathjs/lib/browser/math.js
 
       - name: Deploy to GitHub Pages
